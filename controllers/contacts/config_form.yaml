@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Contact
+
+# Model Form Field configuration
+form: $/istheweb/connect/models/contact/fields.yaml
+
+# Model Class name
+modelClass: Istheweb\Connect\Models\Contact
+
+# Default redirect location
+defaultRedirect: istheweb/connect/contacts
+
+# Create page
+create:
+    title: Create Contact
+    redirect: istheweb/connect/contacts/update/:id
+    redirectClose: istheweb/connect/contacts
+
+# Update page
+update:
+    title: Edit Contact
+    redirect: istheweb/connect/contacts
+    redirectClose: istheweb/connect/contacts
+
+# Preview page
+preview:
+    title: Preview Contact

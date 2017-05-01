@@ -1,0 +1,14 @@
+fields:
+    name:
+        label: 'istheweb.connect::lang.fields.name'
+        span: full
+        required: 1
+        type: text
+    color:
+        label: 'istheweb.connect::lang.fields.color'
+        span: full
+        type: colorpicker
+    webcal:
+        type: 'partial'
+        path: 'webcal'
+        context: 'update'

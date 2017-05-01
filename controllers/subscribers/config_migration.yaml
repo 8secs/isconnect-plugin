@@ -1,0 +1,14 @@
+# ===================================
+#  Import/Export Behavior Config
+# ===================================
+
+import:
+    title: 'istheweb.connect::lang.import'
+    modelClass: Istheweb\Connect\Models\SubscriberImport
+    list: $/istheweb/connect/models/subscriber/columns.yaml
+
+export:
+    title: 'istheweb.connect::lang.export'
+    modelClass: Istheweb\Connect\Models\SubscriberExport
+    list: $/istheweb/connect/models/subscriber/columns.yaml
+    fileName: subscriptions.csv

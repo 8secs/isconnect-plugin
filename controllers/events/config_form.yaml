@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Event
+
+# Model Form Field configuration
+form: $/istheweb/connect/models/event/fields.yaml
+
+# Model Class name
+modelClass: Istheweb\Connect\Models\Event
+
+# Default redirect location
+defaultRedirect: istheweb/connect/events
+
+# Create page
+create:
+    title: Create Event
+    redirect: istheweb/connect/events/update/:id
+    redirectClose: istheweb/connect/events
+
+# Update page
+update:
+    title: Edit Event
+    redirect: istheweb/connect/events
+    redirectClose: istheweb/connect/events
+
+# Preview page
+preview:
+    title: Preview Event

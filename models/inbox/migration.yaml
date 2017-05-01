@@ -1,0 +1,15 @@
+columns:
+    name:
+      label: 'istheweb.connect::lang.fields.name'
+    email:
+      label: 'istheweb.connect::lang.fields.email'
+    phone:
+      label: 'istheweb.connect::lang.fields.phone'
+    company:
+      label: 'istheweb.connect::lang.fields.company'
+    created_at:
+      label: 'istheweb.connect::lang.fields.date'
+    subject:
+      label: 'istheweb.connect::lang.fields.subject'
+    message:
+      label: 'istheweb.connect::lang.fields.message'

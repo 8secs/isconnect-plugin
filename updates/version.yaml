@@ -1,0 +1,10 @@
+1.0.1: First version of Connect
+1.0.2:
+    - 'Create Tables'
+    - create_calendars_table.php
+    - create_companies_table.php
+    - create_contacts_table.php
+    - create_events_table.php
+    - create_inboxes_table.php
+    - create_subscribers_table.php
+    - seed_tables.php

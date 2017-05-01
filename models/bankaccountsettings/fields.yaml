@@ -1,0 +1,34 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    bank_accounts:
+        label: Cuentas Bancarias
+        span: full
+        type: repeater
+        form:
+            fields:
+                name:
+                    label: Name
+                    span: auto
+                url:
+                    label: banco
+                    span: auto
+                sucursal:
+                    label: sucursal
+                    span: auto
+                dc:
+                    label: dc
+                    span: auto
+                cuenta:
+                    label: cuenta
+                    span: auto
+                saldo:
+                    label: saldo
+                    span: auto
+                descripcion:
+                    label: descripción
+                    type: textarea
+                    size: small
+

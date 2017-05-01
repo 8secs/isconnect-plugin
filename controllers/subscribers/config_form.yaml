@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Subscriber
+
+# Model Form Field configuration
+form: $/istheweb/connect/models/subscriber/fields.yaml
+
+# Model Class name
+modelClass: Istheweb\Connect\Models\Subscriber
+
+# Default redirect location
+defaultRedirect: istheweb/connect/subscribers
+
+# Create page
+create:
+    title: Create Subscriber
+    redirect: istheweb/connect/subscribers/update/:id
+    redirectClose: istheweb/connect/subscribers
+
+# Update page
+update:
+    title: Edit Subscriber
+    redirect: istheweb/connect/subscribers
+    redirectClose: istheweb/connect/subscribers
+
+# Preview page
+preview:
+    title: Preview Subscriber

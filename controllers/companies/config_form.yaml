@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Company
+
+# Model Form Field configuration
+form: $/istheweb/connect/models/company/fields.yaml
+
+# Model Class name
+modelClass: Istheweb\Connect\Models\Company
+
+# Default redirect location
+defaultRedirect: istheweb/connect/companies
+
+# Create page
+create:
+    title: Create Company
+    redirect: istheweb/connect/companies/update/:id
+    redirectClose: istheweb/connect/companies
+
+# Update page
+update:
+    title: Edit Company
+    redirect: istheweb/connect/companies
+    redirectClose: istheweb/connect/companies
+
+# Preview page
+preview:
+    title: Preview Company

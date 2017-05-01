@@ -1,0 +1,33 @@
+# ===================================
+#  Import/Export Behavior Config
+# ===================================
+
+import:
+    title: 'istheweb.connect::lang.import'
+    modelClass: Istheweb\Connect\Models\ContactImport
+    list: $/istheweb/connect/models/contact/migration.yaml
+    form:
+      fields:
+        # concat_name:
+        #   label: 'Concatenate First and Last Name'
+        #   type: 'checkbox'
+        #   span: 'full'
+        company_import:
+          label: 'All contacts from Company?'
+          span: 'full'
+          type: 'checkbox'
+        company_all:
+          label: 'istheweb.connect::lang.fields.company'
+          span: 'auto'
+          type: 'relation'
+          nameFrom: name
+          trigger:
+            action: show
+            field: company_import
+            condition: 'checked'
+
+export:
+    title: 'istheweb.connect::lang.export'
+    modelClass: Istheweb\Connect\Models\ContactExport
+    list: $/istheweb/connect/models/contact/migration.yaml
+    fileName: contacts.csv

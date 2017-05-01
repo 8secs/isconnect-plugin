@@ -1,0 +1,12 @@
+{
+  "require": {
+    "owl/address": "~1.0@dev",
+    "drewm/mailchimp-api": "^2.2",
+    "maknz/slack-laravel": "^1.0",
+    "devristo/phpws": "dev-master",
+    "evenement/evenement": "2.0.*",
+    "react/event-loop": "^0.4.1",
+    "react/promise": "^2.2",
+    "coderstephen/slack-client": "^0.2.5"
+  }
+}

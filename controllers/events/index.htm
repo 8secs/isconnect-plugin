@@ -1,0 +1,121 @@
+<div class="control-breadcrumb" style="margin-bottom: 0">
+    <li><?= Lang::get('istheweb.connect::lang.manage') ?> <?= e($this->pageTitle) ?></li>
+    <li><?= Lang::get('istheweb.connect::lang.timeline_view') ?></li>
+    <li class="pull-right">
+        <a href="<?= Backend::url('istheweb/connect/events/create') ?>" class="link oc-icon-plus"><?= e(trans('backend::lang.form.create')) ?></a>
+        <a href="<?= Backend::url('istheweb/connect/events/list-view') ?>" class="link oc-icon-eye"><?= Lang::get('istheweb.connect::lang.list_view') ?></a>
+        <a href="<?= Backend::url('istheweb/connect/calendars') ?>" class="link oc-icon-calendar"><?= trans('istheweb.connect::lang.manage_calendars') ?></a>
+    </li>
+</div>
+<div class="calendar"></div>
+<div class="realtime-info"></div>
+<div id="out"></div>
+
+
+<style>
+    <?php foreach ($calendars as $key => $value): ?>
+    .item-status-<?= $value->id ?>{
+                          background-color: <?= $value->color ?>;
+                      }
+    <?php endforeach ?>
+</style>
+<script>
+    var today = moment().startOf('day');
+    var Calendar = {
+        Periods: [
+            {
+                Name: '1 day',
+                Label: '1 day',
+                Start: (60 * 7),
+                TimeframePeriod: (60),
+                TimeframeOverall: (60 * 24),
+                TimeframeHeaders: ['MMMM DD, YYYY','ha']
+            },
+            {
+                Name: '2 weeks',
+                Label: '2 weeks',
+                TimeframePeriod: (60 * 24),
+                TimeframeOverall: (60 * 24 * 14),
+                TimeframeHeaders: ['MMMM YYYY','D']
+            },
+            {
+                Name: '1 month',
+                Label: '1 month',
+                TimeframePeriod: (60 * 24 * 1),
+                TimeframeOverall: (60 * 24 * 28),
+                TimeframeHeaders: ['MMMM YYYY','D']
+            }
+        ],
+
+        Sections: [
+        <?php foreach ($calendars as $key => $value): ?>
+    {
+        id: <?= $value->id ?>,
+        name: '<?= $value->name ?>'
+    },
+    <?php endforeach ?>
+    ],
+
+    Init: function () {
+        TimeScheduler.Options.GetSections = Calendar.GetSections;
+        TimeScheduler.Options.GetSchedule = Calendar.GetSchedule;
+        TimeScheduler.Options.Start = moment(today).add('hours', 7);
+        TimeScheduler.Options.Periods = Calendar.Periods;
+        TimeScheduler.Options.SelectedPeriod = '2 weeks';
+        TimeScheduler.Options.Element = $('.calendar');
+
+        TimeScheduler.Options.AllowDragging = false;
+        TimeScheduler.Options.AllowResizing = false;
+
+        TimeScheduler.Options.Events.ItemClicked = Calendar.Item_Clicked;
+        TimeScheduler.Options.Events.ItemDropped = Calendar.Item_Dragged;
+        TimeScheduler.Options.Events.ItemResized = Calendar.Item_Resized;
+
+        TimeScheduler.Options.Events.ItemMovement = Calendar.Item_Movement;
+        TimeScheduler.Options.Events.ItemMovementStart = Calendar.Item_MovementStart;
+        TimeScheduler.Options.Events.ItemMovementEnd = Calendar.Item_MovementEnd;
+
+        TimeScheduler.Options.Text.NextButton = '&nbsp;';
+        TimeScheduler.Options.Text.PrevButton = '&nbsp;';
+
+        TimeScheduler.Options.MaxHeight = 100;
+
+        TimeScheduler.Init();
+    },
+
+    GetSections: function (callback) {
+        callback(Calendar.Sections);
+    },
+
+    GetSchedule: function (callback, start, end) {
+        $.request('onChangeDate',{
+            data: {start_date: start.toDate(), end_date: end.toDate()},
+            success: function(r){
+                callback(setList(r.items));
+            }
+        });
+    },
+
+    Item_Clicked: function (item) {
+        window.location.replace("<?= Backend::url('istheweb/connect/events/update') ?>/"+item.id);
+    },
+    };
+
+    var setList = function(data){
+        var items = [];
+        $.each(data, function(index, val) {
+            items.push({
+                id: val.id,
+                name: val.name,
+                sectionID: val.calendar_id,
+                start: moment(val.start_date),
+                end: moment(val.end_date),
+                classes: 'item-status-'+ val.calendar_id
+            });
+        });
+
+        return items;
+    };
+
+    $(document).ready(Calendar.Init);
+</script>

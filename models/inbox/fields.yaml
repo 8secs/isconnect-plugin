@@ -1,0 +1,38 @@
+fields:
+    name:
+        label: 'istheweb.connect::lang.fields.name'
+        span: auto
+        type: text
+        cssClass: 'oc-icon-user'
+    email:
+        label: 'istheweb.connect::lang.fields.email'
+        span: auto
+        type: text
+        cssClass: 'oc-icon-at'
+    phone:
+        label: 'istheweb.connect::lang.fields.phone'
+        span: auto
+        type: text
+        cssClass: 'oc-icon-phone'
+    company:
+        label: 'istheweb.connect::lang.fields.company'
+        span: auto
+        type: text
+        cssClass: 'oc-icon-bank'
+    created_at:
+        label: 'istheweb.connect::lang.fields.date'
+        mode: datetime
+        span: auto
+        type: datepicker
+        cssClass: 'oc-icon-calendar-o'
+    subject:
+        label: 'istheweb.connect::lang.fields.subject'
+        span: auto
+        type: text
+        cssClass: 'oc-icon-edit'
+    message:
+        label: 'istheweb.connect::lang.fields.message'
+        size: small
+        span: full
+        type: textarea
+        cssClass: 'oc-icon-comments'

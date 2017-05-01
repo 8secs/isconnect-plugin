@@ -1,0 +1,14 @@
+# ===================================
+#  Import/Export Behavior Config
+# ===================================
+
+import:
+    title: 'istheweb.connect::lang.import'
+    modelClass: Istheweb\Connect\Models\CompanyImport
+    list: $/istheweb/connect/models/company/migration.yaml
+
+export:
+    title: 'istheweb.connect::lang.export'
+    modelClass: Istheweb\Connect\Models\CompanyExport
+    list: $/istheweb/connect/models/company/migration.yaml
+    fileName: companies.csv

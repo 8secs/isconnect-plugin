@@ -1,0 +1,30 @@
+				<tr>
+					<td class="content-block" style="padding: 0">
+						<hr>
+						<?= $mail->footer ?>
+						<br>
+						<?php if ($mail->social): ?>
+							<?php foreach ($company->social as $social): ?>
+								<a style="text-decoration: none;" href="<?= $social['url'] ?>">
+									<img width="34" height="34" alt="" border="0" src="<?= $company->getIconBase64($social['network']) ?>" />
+								</a>
+								&nbsp;
+							<?php endforeach ?>
+						<?php endif ?>
+					</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table>
+<div class="footer">
+<table width="100%">
+<tr>
+<td class="content-block"><img src="<?= $company->getIconBase64('ico-eco') ?>" alt="eco" width="14" height="14" align="absmiddle" /> No me imprimas si no es necesario. Protejamos el medio ambiente</td>
+</tr>
+</table>
+</div></div>
+</td>
+<td></td>
+</tr>
+</table>

@@ -1,0 +1,101 @@
+secondaryTabs:
+    fields:
+        name:
+            label: 'istheweb.connect::lang.fields.name'
+            span: full
+            required: 1
+            type: text
+            cssClass: oc-icon-user
+            tab: 'istheweb.connect::lang.menu.contact'
+        email:
+            label: 'istheweb.connect::lang.fields.email'
+            span: auto
+            required: 1
+            type: text
+            cssClass: oc-icon-at
+            tab: 'istheweb.connect::lang.menu.contact'
+        phone:
+            label: 'istheweb.connect::lang.fields.phone'
+            span: auto
+            type: text
+            cssClass: oc-icon-phone
+            tab: 'istheweb.connect::lang.menu.contact'
+        address:
+            label: 'istheweb.connect::lang.fields.address'
+            span: full
+            type: istheweb_connect_address
+            cssClass: oc-icon-map-marker
+            fieldMap:
+                street: address
+                country-long: country
+                state: state
+                city: city
+                zip: zip_code
+            tab: 'istheweb.connect::lang.fields.location'
+        state:
+            label: 'istheweb.connect::lang.fields.state'
+            span: auto
+            type: text
+            cssClass: oc-icon-map-pin
+            tab: 'istheweb.connect::lang.fields.location'
+        city:
+            label: 'istheweb.connect::lang.fields.city'
+            span: auto
+            type: text
+            cssClass: oc-icon-map-signs
+            tab: 'istheweb.connect::lang.fields.location'
+        country:
+            label: 'istheweb.connect::lang.fields.country'
+            span: auto
+            type: text
+            cssClass: oc-icon-globe
+            tab: 'istheweb.connect::lang.fields.location'
+        zip_code:
+            label: ZIP
+            span: auto
+            type: number
+            cssClass: oc-icon-map
+            tab: 'istheweb.connect::lang.fields.location'
+        company:
+            label: 'istheweb.connect::lang.fields.company'
+            nameFrom: name
+            descriptionFrom: description
+            span: auto
+            type: relation
+            cssClass: oc-icon-bank
+            emptyOption: ' - - - '
+            tab: 'istheweb.connect::lang.fields.personal_details'
+        position:
+            label: 'istheweb.connect::lang.fields.position'
+            span: auto
+            tab: 'istheweb.connect::lang.fields.personal_details'
+            type: text
+            cssClass: oc-icon-briefcase
+        sn_facebook:
+            label: Facebook
+            span: auto
+            placeholder: 'http://www.facebook.com/{username}'
+            cssClass: oc-icon-facebook
+            type: text
+            tab: 'istheweb.connect::lang.fields.social_networks'
+        sn_twitter:
+            label: Twitter
+            span: auto
+            placeholder: 'http://www.twitter.com/{username}'
+            cssClass: oc-icon-twitter
+            type: text
+            tab: 'istheweb.connect::lang.fields.social_networks'
+        sn_linkedin:
+            label: LinkedIn
+            span: auto
+            placeholder: 'http://www.linkedin.com/in/{username}'
+            cssClass: oc-icon-linkedin
+            type: text
+            tab: 'istheweb.connect::lang.fields.social_networks'
+        sn_gplus:
+            label: Google Plus
+            span: auto
+            placeholder: 'http://www.plus.google.com/u/...'
+            cssClass: oc-icon-google-plus
+            type: text
+            tab: 'istheweb.connect::lang.fields.social_networks'

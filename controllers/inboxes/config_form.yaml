@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Inbox
+
+# Model Form Field configuration
+form: $/istheweb/connect/models/inbox/fields.yaml
+
+# Model Class name
+modelClass: Istheweb\Connect\Models\Inbox
+
+# Default redirect location
+defaultRedirect: istheweb/connect/inboxes
+
+# Create page
+create:
+    title: Create Inbox
+    redirect: istheweb/connect/inboxes/update/:id
+    redirectClose: istheweb/connect/inboxes
+
+# Update page
+update:
+    title: Edit Inbox
+    redirect: istheweb/connect/inboxes
+    redirectClose: istheweb/connect/inboxes
+
+# Preview page
+preview:
+    title: Preview Inbox

@@ -1,0 +1,5 @@
+<div class="form-group has-feedback">
+	<label><?= trans('istheweb.connect::lang.fields.webcal') ?></label>
+	<input style="background-color: #f8f0d5" onclick="this.setSelectionRange(0, this.value.length)" type="text" class="form-control" value="<?= url() ?>/api/calendar/<?= $model->id ?>/calendar.ics">
+	<span class="icon-rss form-control-feedback" aria-hidden="true"></span>
+</div>

@@ -1,0 +1,19 @@
+columns:
+    name:
+        label: 'istheweb.connect::lang.fields.name'
+    email:
+        label: 'istheweb.connect::lang.fields.email'
+    phone:
+        label: 'istheweb.connect::lang.fields.phone'
+    address:
+        label: 'istheweb.connect::lang.fields.address'
+    company:
+        label: 'istheweb.connect::lang.fields.company'
+        relation: company
+        select: name
+    company_email:
+        label: 'istheweb.connect::lang.fields.company_email'
+        relation: company
+        select: email
+    position:
+        label: 'istheweb.connect::lang.fields.position'

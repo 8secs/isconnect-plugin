@@ -1,0 +1,9 @@
+# ===================================
+#  Import/Export Behavior Config
+# ===================================
+
+export:
+    title: 'istheweb.connect::lang.export'
+    modelClass: Istheweb\Connect\Models\InboxExport
+    list: $/istheweb/connect/models/inbox/migration.yaml
+    fileName: inbox.csv

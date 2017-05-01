@@ -1,0 +1,69 @@
+fields:
+    section:
+        label: 'istheweb.connect::lang.mail.preference'
+        span: full
+        type: section
+secondaryTabs:
+    fields:
+        footer:
+            label: 'istheweb.connect::lang.fields.content'
+            size: large
+            span: full
+            type: richeditor
+            tab: 'istheweb.connect::lang.fields.footer'
+        social:
+            label: 'istheweb.connect::lang.fields.social'
+            span: full
+            type: switch
+            tab: 'istheweb.connect::lang.fields.footer'
+        subscriptor_subject:
+            label: 'istheweb.connect::lang.fields.subject'
+            oc.commentPosition: ''
+            default: 'We will send you news shortly'
+            span: full
+            type: text
+            tab: 'istheweb.connect::lang.menu.subscribers'
+        subscriptor:
+            label: 'istheweb.connect::lang.mail.subscriptor'
+            size: large
+            default: "You've been added to our mailing list and will now be among the first to hear about new arrivals, bg events and especial offers."
+            span: full
+            type: richeditor
+            tab: 'istheweb.connect::lang.menu.subscribers'
+        inbox_subject:
+            label: 'istheweb.connect::lang.fields.subject'
+            span: full
+            default: 'We will be contacting you'
+            oc.commentPosition: ''
+            type: text
+            tab: 'istheweb.connect::lang.menu.inboxes'
+        inbox:
+            label: 'istheweb.connect::lang.mail.inbox_reply'
+            size: large
+            default: "Thank you for your interest, We have received your information, one of our support team will contact you"
+            span: full
+            type: richeditor
+            tab: 'istheweb.connect::lang.menu.inboxes'
+        api_key:
+            label: 'Mailchimp API Key'
+            span: auto
+            tab: 'Mailchimp'
+            trigger:
+              action: enable
+              field: mailchimp
+              condition: checked
+        mailchimp_list:
+            label: 'istheweb.connect::lang.fields.list'
+            span: auto
+            type: dropdown
+            tab: 'Mailchimp'
+            dependsOn: api_key
+            trigger:
+              action: enable
+              field: mailchimp
+              condition: checked
+        mailchimp:
+            label: 'istheweb.connect::lang.fields.mailchimp'
+            span: full
+            type: switch
+            tab: 'Mailchimp'

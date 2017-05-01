@@ -1,0 +1,71 @@
+fields:
+    name:
+        label: 'istheweb.connect::lang.fields.name'
+        span: auto
+        required: 1
+        type: text
+        cssClass: 'oc-icon-font'
+    calendar:
+        label: 'istheweb.connect::lang.fields.calendar'
+        nameFrom: name
+        descriptionFrom: description
+        span: auto
+        type: relation
+        cssClass: oc-icon-calendar-o
+    description:
+        label: 'istheweb.connect::lang.fields.description'
+        size: large
+        span: full
+        type: richeditor
+        cssClass: oc-icon-edit
+    organizer:
+        label: 'istheweb.connect::lang.fields.organizer'
+        span: full
+        type: text
+        cssClass: oc-icon-user
+    address:
+        label: 'istheweb.connect::lang.fields.address'
+        span: full
+        type: istheweb_connect_address
+        cssClass: oc-icon-map-marker
+    pictures:
+        label: 'istheweb.connect::lang.fields.gallery'
+        mode: image
+        useCaption: true
+        cssClass: oc-icon-picture-o
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: full
+        type: fileupload
+secondaryTabs:
+    fields:
+        featured:
+            label: 'istheweb.connect::lang.fields.featured_photo'
+  
+            mode: image
+            imageWidth: '150'
+            imageHeight: '150'
+            useCaption: true
+            thumbOptions:
+                mode: crop
+                extension: auto
+            span: full
+            type: fileupload
+            cssClass: oc-icon-camera
+        start_date:
+            label: 'istheweb.connect::lang.fields.start_date'
+  
+            mode: datetime
+            span: full
+            required: 1
+            type: datepicker
+            cssClass: oc-icon-clock-o
+        end_date:
+            label: 'istheweb.connect::lang.fields.end_date'
+  
+            mode: datetime
+            span: full
+            required: 1
+            type: datepicker
+            cssClass: oc-icon-clock-o

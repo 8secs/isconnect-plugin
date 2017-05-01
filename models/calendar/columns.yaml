@@ -1,0 +1,13 @@
+columns:
+    name:
+        label: 'istheweb.connect::lang.fields.name'
+        type: text
+        searchable: true
+        sortable: true
+    color:
+        label: 'istheweb.connect::lang.fields.color'
+        searchable: false
+        sortable: true
+        type: partial
+        width: 150px
+        path: ~/plugins/istheweb/connect/partials/_list_color.htm

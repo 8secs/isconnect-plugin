@@ -1,0 +1,17 @@
+columns:
+    name:
+        label: 'istheweb.connect::lang.fields.name'
+    email:
+        label: 'istheweb.connect::lang.fields.email'
+    phone:
+        label: 'istheweb.connect::lang.fields.phone'
+    address:
+        label: 'istheweb.connect::lang.fields.address'
+    state:
+        label: 'istheweb.connect::lang.fields.state'
+    city:
+        label: 'istheweb.connect::lang.fields.city'
+    country:
+        label: 'istheweb.connect::lang.fields.country'
+    zip_code:
+        label: 'ZIP'

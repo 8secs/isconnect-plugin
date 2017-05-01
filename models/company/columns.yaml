@@ -1,0 +1,31 @@
+columns:
+    name:
+        label: 'istheweb.connect::lang.fields.name'
+        type: text
+        searchable: true
+        sortable: true
+    state:
+        label: 'istheweb.connect::lang.fields.state'
+        type: text
+        searchable: true
+        sortable: true
+    city:
+        label: 'istheweb.connect::lang.fields.city'
+        type: text
+        searchable: true
+        sortable: true
+    country:
+        label: 'istheweb.connect::lang.fields.country'
+        type: text
+        searchable: true
+        sortable: true
+    email:
+        label: 'istheweb.connect::lang.fields.email'
+        type: text
+        searchable: true
+        sortable: true
+    phone:
+        label: 'istheweb.connect::lang.fields.phone'
+        type: text
+        searchable: true
+        sortable: true

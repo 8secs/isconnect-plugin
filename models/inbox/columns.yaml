@@ -1,0 +1,16 @@
+columns:
+    name:
+        label: 'istheweb.connect::lang.fields.name'
+        type: text
+        searchable: true
+        sortable: true
+    email:
+        label: 'istheweb.connect::lang.fields.email'
+        type: text
+        searchable: true
+        sortable: true
+    created_at:
+        label: 'istheweb.connect::lang.fields.date'
+        type: timesince
+        searchable: true
+        sortable: true

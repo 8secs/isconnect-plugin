@@ -1,0 +1,128 @@
+fields:
+    section1:
+        label: 'istheweb.connect::lang.fields.company'
+        span: full
+        type: section
+    logo:
+        label: 'istheweb.connect::lang.fields.logo'
+        mode: image
+        imageWidth: 320
+        imageHeight: 120
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: right
+        type: fileupload
+    name:
+        label: 'istheweb.connect::lang.fields.name'
+        span: left
+        type: text
+    slogan:
+        label: 'istheweb.connect::lang.fields.slogan'
+        span: left
+        type: text
+    website:
+        label: 'istheweb.connect::lang.fields.url'
+        span: left
+        type: text
+    section2:
+        label: 'istheweb.connect::lang.fields.details'
+        span: full
+        type: section
+    address:
+        label: 'istheweb.connect::lang.fields.address'
+        size: tiny
+        span: full
+        type: textarea
+    phone:
+        label: 'istheweb.connect::lang.fields.phone'
+        span: auto
+        type: text
+    email:
+        label: 'istheweb.connect::lang.fields.email'
+        span: auto
+        type: text
+    section3:
+        label: 'istheweb.connect::lang.fields.accounting'
+        span: full
+        type: section
+    company_nid:
+        label: 'istheweb.connect::lang.fields.company_id'
+        span: auto
+        type: text
+    company_name_nid:
+        label: 'istheweb.connect::lang.fields.alias_id'
+        span: auto
+        type: text
+        default: 'NID'
+    is_year_invoice:
+        label: 'istheweb.connect::lang.fields.is_year_invoice'
+        type: switch
+        span: auto
+    reset_year_invoice:
+        label: 'istheweb.connect::lang.fields.reset_year_invoice'
+        type: switch
+        span: auto
+    position_year_number:
+        label: 'istheweb.connect::lang.fields.position_year_number'
+        type: radio
+        span: auto
+        options:
+            before: 'istheweb.connect::lang.fields.before_year_invoice'
+            after: 'istheweb.connect::lang.fields.after_year_invoice'
+    invoice_number:
+        label: 'istheweb.connect::lang.fields.invoice_number'
+        span: auto
+        comment: 'istheweb.connect::lang.fields.invoice_number_comment'
+    legal_invoice_text:
+        label: 'istheweb.connect::lang.fields.legal_text'
+        span: auto
+        type: textarea
+    footer_invoice_text:
+        label: 'istheweb.connect::lang.fields.footer_text'
+        span: auto
+        type: textarea
+    section_social:
+        label: 'istheweb.connect::lang.fields.social_networks'
+        span: full
+        type: section
+    social:
+        span: full
+        type: repeater
+        form:
+            fields:
+                network:
+                    label: 'istheweb.connect::lang.fields.network'
+                    span: auto
+                    options:
+                        appstore: App Store
+                        deviant: Deviant Art
+                        ebay: eBay
+                        github: Github
+                        linkedin: LinkedIn
+                        rss: RSS
+                        tumblr: Tumblr
+                        wordpress: Wordpress
+                        behance: BeHance
+                        dribble: Dribble
+                        facebook: Facebook
+                        gplus: Google Plus
+                        pinterest: Pinterest
+                        instagram: Instragram
+                        skype: Skype
+                        reddit: Reddit
+                        twitter: Twitter
+                        youtube: Youtube
+                        blogger: Blogger
+                        dropbox: Dropbox
+                        gdrive: Google Drive
+                        playstore: Play Store
+                        soundcloud: Sound Cloud
+                        mail: Email
+                        vimeo: Vimeo
+                    type: dropdown
+                url:
+                    label: 'istheweb.connect::lang.fields.url'
+                    span: auto
+                    type: text

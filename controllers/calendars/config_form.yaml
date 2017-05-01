@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Calendar
+
+# Model Form Field configuration
+form: $/istheweb/connect/models/calendar/fields.yaml
+
+# Model Class name
+modelClass: Istheweb\Connect\Models\Calendar
+
+# Default redirect location
+defaultRedirect: istheweb/connect/calendars
+
+# Create page
+create:
+    title: Create Calendar
+    redirect: istheweb/connect/calendars/update/:id
+    redirectClose: istheweb/connect/calendars
+
+# Update page
+update:
+    title: Edit Calendar
+    redirect: istheweb/connect/calendars
+    redirectClose: istheweb/connect/calendars
+
+# Preview page
+preview:
+    title: Preview Calendar

@@ -1,0 +1,11 @@
+fields:
+    name:
+        label: 'istheweb.connect::lang.fields.name'
+        span: full
+        type: text
+        cssClass: 'oc-icon-user'
+    email:
+        label: 'istheweb.connect::lang.fields.email'
+        span: full
+        type: text
+        cssClass: 'oc-icon-at'

@@ -1,0 +1,6 @@
+scopes:
+    type:
+        label: 'istheweb.connect::lang.inbox.hide_archived'
+        default: true
+        type: checkbox
+        conditions: status < 1

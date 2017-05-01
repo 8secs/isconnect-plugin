@@ -1,0 +1,17 @@
+<div class="form-group" data-field-name="<?= $this->fieldName; ?>" style="padding-bottom:0px;">
+		<div data-request-data="_relation_field: '<?= $this->fieldName; ?>'">
+			<a 
+				data-control="popup"
+				data-size="huge" 
+				data-handler="onRelationManageForm" 
+				href="javascript:;" 
+				class="btn">
+				<i class="icon-plus"></i>
+			</a>
+		</div>
+	</div>
+<hr>
+<div class="relation-widget" id="<?= $this->getId() ?>">
+    <?= $this->makePartial('~/modules/backend/widgets/form/partials/_field_'.$field->type.'.htm', ['field' => $field]) ?>
+</div>
+<hr>

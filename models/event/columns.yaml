@@ -1,0 +1,21 @@
+columns:
+    name:
+        label: 'istheweb.connect::lang.fields.name'
+        type: text
+        searchable: true
+        sortable: true
+    caledar:
+        label: 'istheweb.connect::lang.fields.calendar'
+        type: text
+        searchable: true
+        sortable: true
+        select: name
+        relation: calendar
+    start_date:
+        label: 'istheweb.connect::lang.fields.start_date'
+        type: datetime
+        sortable: true
+    end_date:
+        label: 'istheweb.connect::lang.fields.end_date'
+        type: datetime
+        sortable: true
